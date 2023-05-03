@@ -1,0 +1,347 @@
+## Acrylic主题配置文件
+############################################################################################################
+# 为避免主题更新后，配置文件被覆盖，请复制一份此文件到站点根目录下的_config.Acrylic.yml文件中，修改_config.Acrylic.yml文件中的配置
+############################################################################################################
+# 修改此文件前，请仔细阅读官方文档：https://next-docs.acrylic.org.cn/
+############################################################################################################
+
+
+# 站点设置
+site:
+  name: TEA    # 左上角首页名称
+  icon: /img/avatar.webp  # 页脚的icon、加载动画默认的icon
+  icp:  苏ICP备2023009848号-1 
+  siteIcon: /img/avatar.webp # 网页icon
+  iconclass: teafont
+
+# 导航栏
+nav:
+#导航栏左侧
+  left:
+    enable: true
+    menu:
+      我的:
+        博客:
+          icon: /img/avatar.webp
+          url: /
+# 导航栏内容
+  menu:
+    文库:
+      url: false
+      child:
+        文章列表:
+          url: /archives/
+          icon: tea-folder-5-fill
+        全部分类:
+          url: /categories/
+          icon: tea-file-copy-fill
+        全部标签:
+          url: /tags/
+          icon: tea-price-tag-3-fill
+    友链:
+      url: false
+      child:
+        友链鱼塘:
+          url: /fcircle/
+          icon: teafont tea-rss-fill
+        友情链接:
+          url: /links/
+          icon: teafont tea-group-fill
+        发现博主:
+          url: javascript:travelling()
+          icon: teafont tea-gift-2-fill
+    订阅:
+      url: /rss
+    关于:
+      url: /about
+
+
+# 导航栏右侧快捷菜单
+  right: # @todo 允许用户自定义
+    travellings: true   #开往
+    random: true        #
+    console: true       #控制台
+
+# heo式顶部一大坨
+hometop:
+  bbtime: true
+  plusIcon: tea-add-circle-fill
+  banner:
+    enable: true
+    title: 分享设计<br>与科技生活
+    url: tblog.life
+    icon:
+      AE:
+        img: https://static.tblog.life/img/202304112018858.png
+        color: '#989bf8'
+      Sketch:
+        img: https://static.tblog.life/img/202304112018393.png
+        color: '#ffffff'
+      Docker:
+        img: https://static.tblog.life/img/202304112019495.png
+        color: '#57b6e6'
+      ps:
+        img: https://static.tblog.life/img/202304112017581.png
+        color: '#4082c3'
+      FinalCutPro:
+        img: https://static.tblog.life/img/202304112026400.png
+        color: '#ffffff'
+      Python:
+        img: https://static.tblog.life/img/202304112027674.png
+        color: '#ffffff'
+      Swift:
+        img: https://static.tblog.life/img/202304112027548.png
+        color: '#eb6840'
+      Principle:
+        img: https://static.tblog.life/img/202304112058076.png
+        color: '#8f55ba'
+      illustrator:
+        img: https://static.tblog.life/img/202304112059640.png
+        color: '#f29e39'
+      CSS3:
+        img: https://static.tblog.life/img/202304112059777.png
+        color: '#2c51db'
+      JS:
+        img: https://static.tblog.life/img/202304112100481.png
+        color: '#f7cb4f'
+      Git:
+        img: https://static.tblog.life/img/202304112101164.png
+        color: '#df5b40'
+
+  categoryGroup:
+    G1:
+      name: 必看精选
+      icon: teafont tea-star-smile-fill
+      url: /tags/Acrylic/
+    G2:
+      name: 热门文章
+      icon: teafont tea-fire-fill
+      url: /tags/热门/
+    G3:
+      name: 实用教程
+      icon: teafont tea-book-mark-fill
+      url: /tags/教程/
+
+  recommendList:
+    sup: 推荐阅读
+    title: 让互联网技术触手可及
+    url: /about/
+    img: https://static.tblog.life/img/202304221336340.png
+    color: '#F7D6B2'
+
+# 个人卡片
+aside:
+  home:
+    noSticky: ['about', 'flip']
+    Sticky: ['newestPost', 'allInfo']
+  post:
+    noSticky: ['about']
+    Sticky: ['newestPost', 'flip', 'allInfo']   
+  page:
+    noSticky: ['about', 'flip']
+    Sticky: ['newestPost', 'allInfo']
+
+  card:
+    content: 这有关于<b>开发</b>、<b>技术</b>相关的问题和看法，还有对于动漫的一些<b>杂评</b>。<br>相信你可以在这里找到对你有用的知识和教程。
+    information:
+      Github:
+        icon: teafont tea-github-line
+        url: https://github.com/telegalaxy
+      Bilibili:
+        icon: teafont tea-bilibili-fill
+        url: https://space.bilibili.com/566916039
+    button:
+      text: 个人主页
+      url: /
+
+  flip:
+    color: '#0099FF'
+    face:
+      title: QQ群
+      desc: 加入官方QQ群与我们交流
+    backface:
+      title: 扫一扫
+      desc: 获取最新信息和帮助
+      img: data:image/png;base64,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
+
+  toc: 
+    post: true
+    page: false
+
+  # 建站时间
+  siteinfo:
+    postcount: true
+    wordcount: true
+    pv: true
+    uv: true
+    updatetime: true
+    runtimeenable: true
+    runtime: '2021-12-12 00:00:00'
+
+# 页脚
+footer:
+  information:
+    left:
+      Github:
+        icon: teafont tea-github-line
+        url: /
+      Mail:
+        icon: teafont tea-mail-open-line
+        url: mailto:miku.yyds@qq.com
+    right:
+      qqmusic:
+        icon: teafont tea-disc-line
+        url: https://y.qq.com/n/ryqq/profile/like/song?uin=ow4PoKCP7i4soc**
+      bilibili:
+        icon: teafont tea-bilibili-line
+        url: https://space.bilibili.com/566916039
+
+  group:
+    导航:
+      文章归档: /archives/
+      文章分类: /categories/
+      文章标签: /tags/
+      友链: /link/
+    服务:
+      51la统计: https://51.la/
+      百度统计: https://tongji.baidu.com/
+      TianliCDN: https://ql.tianli0.top/
+    Acrylic:
+      主题官网: https://acrylic.zhheo.com/
+      Github: https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic
+      Heo: https://blog.zhheo.com/
+    推荐友链:
+      Heo: https://blog.zhheo.com/
+      Akilar: https://akilar.top
+
+  randomlink: true
+
+page:
+  error: true
+  tags: true
+  categories: true
+  default:
+    cover: /img/hello.jpg   
+
+# 文章页默认设置
+post:
+  default:
+    cover: /img/hello.jpg
+    locate: 无锡
+    copyright: 原创
+    excerpt: 100
+  meta:
+    date: true
+    updated: true
+    locate: true
+    wordcount: true
+    readtime: true
+    pv: true
+    comment: false      
+  award:
+    enable: false
+    wechat:
+    alipay:
+    url:
+  covercolor: #文章cover取色  
+    enable: true
+    local: false
+
+aiexcerpt:
+  default_enable: true
+  custom: false
+  api: 
+  token: PrdirKiMGoCtFsbTO4Yo
+  model: 
+  prompt: '你是一个摘要生成工具，你需要解释我发送给你的内容，不要换行，不要超过150字，只需要介绍文章的内容，不需要提出建议和缺少的东西。请用中文回答，输出的内容开头为“这篇文章介绍了”'
+  ignoreEl: [
+    'table', 'pre', 'figure'
+  ]
+  max_token: 2000,
+# 404
+errorpage:
+  img: /img/acrylic.png
+  text: =awa= 页面走丢了
+  recommendList: true
+
+# 懒加载
+lazyload:
+  enable: true
+  placeholder: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
+  errorimg: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
+
+# 图片灯箱
+lightbox: true
+
+#代码高亮增强
+hightlight:
+  enable: false
+  hightlimit: 200
+
+# 加载动画
+loading:
+  enable: true
+  pace: true
+
+# 第三方设置
+thirdparty:
+  wordcount: true
+  busuanzi: 
+    enable: true
+    usecomment: false #当评论系统开启时文章页面使用评论系统的统计数据
+  search:
+    algolia_search:
+      enable: true
+      hits:
+        per_page: 6
+    local_search:
+      enable: false
+      preload: false
+      CDN:
+  aplayer:
+    enable: true
+    server: tencent
+    id: 1708664797      
+
+# 评论
+comment:
+  enable: false
+  twikoo:
+    envId:
+    # region: ap-shanghai
+    path: window.location.pathname
+
+
+# 插入代码到头部 </head> 之前 和 底部 </body> 之前
+# 插入额外代码 如：统计，广告等
+extends: 
+  head: # 在head中插入
+      # - <link rel="stylesheet" href="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.6/tianli_gpt.css">
+      - <script data-pjax src="https://static.tblog.life/js/algolia/instantsearch.production.min.js"></script>
+      - <script data-pjax src="https://static.tblog.life/js/algolia/algoliasearch-lite.umd.js "></script>
+      # - <script> let tianliGPT_postSelector = '\#post \#article-container';let tianliGPT_key = '5KvMAkaU3gqzQ7JZC9iP';</script>
+		  # - <script src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.6/tianli_gpt.js"></script>
+  body: # 在body中插入
+
+# 非必要勿动
+cdn:
+  head:
+    jquery: https://static.tblog.life/js/jquery/jquery.min.js 
+    pacejs: https://static.tblog.life/js/pace/pace.min.js 
+    icon: https://cdn3.codesign.qq.com/icons/7pOrz0WVJe9WJPX/latest/iconfont.css
+    snackbarcss: /lib/snackbar.min.css
+    qrcodejs: /lib/qrcode.min.js
+    twikoojs: https://cdn.staticfile.org/twikoo/1.6.10/twikoo.all.min.js
+    algolia: https://static.tblog.life/js/algolia/algoliasearch-lite.umd.js 
+  body:
+    swipercss: /lib/swiper.min.css
+    pjaxjs: /lib/pjax.min.js
+    lazyloadjs: /lib/lazyload.min.js
+    snackbarjs: /lib/snackbar.min.js
+    viewimagejs: /lib/view-image.min.js
+    waterfalljs: /lib/waterfall.min.js
+    swiperjs: /lib/swiper.min.js
+    busuanzijs: https://npm.elemecdn.com/penndu@1.0.0/bsz.js
+    aplayercss: https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css
+    aplayerjs: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js
+    metingjs: https://cdn1.tianli0.top/npm/meting@2.0.1/dist/Meting.min.js
